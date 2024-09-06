@@ -2,39 +2,63 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Форма с разными типами input</title>
 </head>
     <body>
-        <h1>Форма с разными типами полей</h1>
+        <h1>Лабораторная №2</h1>
+        <h2>Смоленков Максим МО-221</h2>
 
         <form action="#" method="post">
             <label for="text">Текст:</label>
-            <input type="text" id="text" name="text"><br><br>
+            <input type="text" id="text" name="text" list="text-options"><br><br>
+            <datalist id="text-options">
+                <option value="Option 1">
+                <option value="Option 2">
+                <option value="Option 3">
+            </datalist><br><br>
 
-            <label for="password">Пароль:</label>
-            <input type="password" id="password" name="password"><br><br>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email"><br><br>
+            <fieldset>
+                <legend>Введите данные:</legend>
+                <label for="email">Email:</label>
+                <input type="email" required  id="email" name="email"><br><br>
+                <label for="password">Пароль:</label>
+                <input type="password" required  id="password" name="password"><br><br>
+            </fieldset> <br>
 
             <label for="url">URL:</label>
-            <input type="url" id="url" name="url"><br><br>
+            <input type="url" placeholder="https://example.com" id="url" name="url"><br><br>
 
             <label for="tel">Телефон:</labela>
-            <input type="tel" id="tel" name="tel"><br><br>
+            <input type="tel" placeholder="+8-988-888-89-01"
+            pattern="\+\d-\d{3}-\d{3}-\d{3}-\d{2}-\d{2}" id="tel" name="tel"><br><br>
 
-            <label for="number">Число:</label>
-            <input type="number" id="number" name="number" min="1" max="100"><br><br>
+            <label for="month">Месяц:</labela>
+            <input type="month" id="month" name="month"><br><br>
+
+            <label for="number">Число(от 5 до 15):</label>
+            <input type="number" id="number" min = 5 max = 15 name="number" min="1" max="100" list="number-options"><br><br>
+            <datalist id="number-options">
+                <option value="5">
+                <option value="6">
+                <option value="7">
+                <option value="8">
+                <option value="9">
+            </datalist><br><br>
 
             <label for="date">Дата:</label>
-            <input type="date" id="date" name="date"><br><br>
+            <input type="date" placeholder="Месяц Год" id="date" name="date"><br><br>
 
             <label for="time">Время:</label>
-            <input type="time" id="time" name="time"><br><br>
+            <input type="time" id="time" autofocus name="time"><br><br>
 
             <label for="search">Поиск:</label>
             <input type="search" id="search" name="search"><br><br>
+
+            <label for="textx">Это поле неизменяемое</label>
+            <input type="text" disabled value = Текст id="textx" name="textx"><br><br>
+
+            <label for="textx">Это поле только для чтения</label>
+            <input type="text" readonly value = "Только для чтения" id="textx" name="textx"><br><br>
 
             <label for="color">Цвет:</label>
             <input type="color" id="color" name="color"><br><br>
@@ -43,13 +67,22 @@
             <input type="file" id="file" name="file"><br><br>
 
             <label for="checkbox">Чекбокс:</label>
-            <input type="checkbox" id="checkbox" name="checkbox"><br><br>
+            <input type="checkbox" required  id="checkbox" name="checkbox"><br><br>
+
+            <label for="range">Ползунок:</label>
+            <input type="range" id="range" name="range"><br><br>
+
+            <label for="hidden">Скрытое поле:</label>
+            <input type="hidden" id="hidden" name="hidden"><br><br>
 
             <label>Радио кнопка:</label>
             <input type="radio" id="radio1" name="radio" value="option1">
             <label for="radio1">Вариант 1</label>
             <input type="radio" id="radio2" name="radio" value="option2">
             <label for="radio2">Вариант 2</label><br><br>
+
+            <label>Кнопка отправки с изображением:</label>
+            <input type="image" src="2.jpg" alt="Отправить форму" width="100" height="100"><br><br>
 
             <input type="submit" value="Отправить">
         </form>
