@@ -1,0 +1,29 @@
+/* Стили для тега body */
+body {
+    font-family: Arial, sans-serif; /* Шрифт Arial и запасной шрифт sans-serif */
+    font-size: 16px; /* Размер шрифта 16px */
+    color: #333; /* Цвет текста #333 */
+    line-height: 1.5; /* Межстрочный отступ 1.5 */
+}
+
+/* Стили для класса title */
+.title {
+    font-size: 40px; /* Размер шрифта 40px */
+    color: #f03333; /* Цвет текста #f03333 */
+    line-height: 1.2; /* Межстрочный отступ 1.2 */
+    text-transform: uppercase; /* Все буквы заглавные */
+}
+
+.subtitle {
+    font-size: 30px; /* Размер шрифта 30px */
+    color: #12ac11; /* Цвет текста #12ac11 */
+    line-height: 1.2; /* Межстрочный отступ 1.2 */
+    text-decoration: underline; /* Подчеркивание текста снизу */
+}
+
+.list {
+    font-size: 20px;
+    color: #444;
+    font-style: italic;
+    list-style-type: square;
+}
