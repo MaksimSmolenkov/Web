@@ -25,24 +25,24 @@ button {
     cursor: pointer;
 }
 
-.stack {
+.queue {
     width: 45px;
-    min-height: 400px;
+    min-height: 500px;
+    
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
     padding: 10px;
     background-color: white;
 }
 
-.stack-element {
+.queue-element {
     width: 80%;
     padding: 10px;
     margin: 5px 0;
-    border: 2px solid #d1e1e8;
-    background-color: #4CAF50;
+    background-color: #2d4cc7;
     color: white;
     text-align: center;
     font-weight: bold;
-    border-radius: 5px;
+    
 }
