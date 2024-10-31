@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Визуализация Очереди</title>
+    <title>Визуализация Стека</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Визуализация Очереди</h1>
+    <h1>Визуализация Стека</h1>
     
-    <!-- Ввод элемента и кнопки управления очередью -->
+    <!-- Ввод элемента и кнопки управления стеком -->
     <div class="controls">
         <input type="text" id="elementInput" placeholder="Введите элемент">
-        <button onclick="enqueueElement()">Добавить в очередь</button>
-        <button onclick="dequeueElement()">Удалить из очереди</button>
+        <button onclick="pushElement()">Добавить</button>
+        <button onclick="popElement()">Удалить</button>
     </div>
 
-    <!-- Контейнер для отображения очереди -->
-    <div id="queueContainer" class="queue"></div>
+    <!-- Контейнер для отображения стека -->
+    <div id="stackContainer" class="stack"></div>
 
     <script src="script.js"></script>
 </body>

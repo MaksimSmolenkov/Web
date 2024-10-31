@@ -1,40 +1,40 @@
-// Массив для хранения элементов очереди
-let queue = [];
+// Массив для хранения элементов стека
+let stack = [];
 
-// Функция для добавления элемента в очередь
-function enqueueElement() {
+// Функция для добавления элемента в стек
+function pushElement() {
     const inputElement = document.getElementById('elementInput');
     const value = inputElement.value;
 
     if (value) {
-        queue.push(value); // Добавляем элемент в конец массива (очереди)
+        stack.push(value); // Добавляем элемент в массив
         inputElement.value = ''; // Очищаем поле ввода
-        renderQueue(); // Обновляем визуализацию очереди
+        renderStack(); // Обновляем визуализацию стека
     } else {
-        alert("Введите значение для добавления в очередь");
+        alert("Введите значение для добавления в стек");
     }
 }
 
-// Функция для удаления элемента из очереди
-function dequeueElement() {
-    if (queue.length > 0) {
-        queue.shift(); // Удаляем первый элемент из массива (очереди)
-        renderQueue(); // Обновляем визуализацию очереди
+// Функция для удаления элемента из стека
+function popElement() {
+    if (stack.length > 0) {
+        stack.pop(); // Удаляем верхний элемент из массива
+        renderStack(); // Обновляем визуализацию стека
     } else {
-        alert("Очередь пуста");
+        alert("Стек пуст");
     }
 }
 
-// Функция для визуализации очереди
-function renderQueue() {
-    const queueContainer = document.getElementById('queueContainer');
-    queueContainer.innerHTML = ''; // Очищаем контейнер
+// Функция для визуализации стека
+function renderStack() {
+    const stackContainer = document.getElementById('stackContainer');
+    stackContainer.innerHTML = ''; // Очищаем контейнер
 
-    // Проходимся по массиву очереди и создаем элементы для отображения
-    queue.forEach(element => {
-        const queueElement = document.createElement('div');
-        queueElement.className = 'queue-element';
-        queueElement.textContent = element;
-        queueContainer.appendChild(queueElement);
+    // Проходимся по массиву стека и создаем элементы для отображения
+    stack.forEach(element => {
+        const stackElement = document.createElement('div');
+        stackElement.className = 'stack-element';
+        stackElement.textContent = element;
+        stackContainer.appendChild(stackElement);
     });
 }
