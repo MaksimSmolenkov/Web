@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Визуализация Очереди</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Визуализация Очереди</h1>
+    
+    <!-- Ввод элемента и кнопки управления очередью -->
+    <div class="controls">
+        <input type="text" id="elementInput" placeholder="Введите элемент">
+        <button onclick="enqueueElement()">Добавить в очередь</button>
+        <button onclick="dequeueElement()">Удалить из очереди</button>
+    </div>
+
+    <!-- Контейнер для отображения очереди -->
+    <div id="queueContainer" class="queue"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
