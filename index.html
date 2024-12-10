@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Справочник организации</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Справочник организации</h1>
+    <input type="text" id="searchInput" placeholder="Введите ФИО сотрудника...">
+    <ul id="searchResults"></ul>
+
+    <div id="orgTree">
+        <ul>
+            <li>
+                <span class="caret">Департамент 1</span>
+                <ul class="nested">
+                    <li data-name="Иванов Иван Иванович">Иванов Иван Иванович</li>
+                    <li data-name="Петров Пётр Петрович">Петров Пётр Петрович</li>
+                    <li>
+                        <span class="caret">Отдел 1.1</span>
+                        <ul class="nested">
+                            <li data-name="Сидоров Сидор Сидорович">Сидоров Сидор Сидорович</li>
+                            <li data-name="Кузнецов Кузьма Кузьмич">Кузнецов Кузьма Кузьмич</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span class="caret">Департамент 2</span>
+                <ul class="nested">
+                    <li data-name="Алексеев Алексей Алексеевич">Алексеев Алексей Алексеевич</li>
+                    <li data-name="Николаев Николай Николаевич">Николаев Николай Николаевич</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
